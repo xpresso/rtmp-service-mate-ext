@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="deploy to red5" default="deploy" basedir="../">
+
+	<property name="dest" value="/opt/red5/dist/webapps/rtmp-service-mate-ext/"/>
+	<property name="src" value="red5/www/"/>
+
+	<target name="init">
+		<mkdir dir="${dest}"/>
+	</target>
+
+	<target name="clean">
+		<delete includeEmptyDirs="true">
+			<fileset dir="${dest}">
+				<include name="*/**"/>
+				<include name="*"/>
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="deploy" depends="init,clean">
+		<copy todir="${dest}">
+			<fileset dir="${src}">
+				<include name="*/**"/>
+				<include name="*"/>
+			</fileset>
+		</copy>
+		<copy todir="${dest}WEB-INF/classes">
+			<fileset dir="out/production/red5/">
+				<include name="*/**"/>
+				<include name="*/**/*"/>
+			</fileset>
+		</copy>
+	</target>
+
+</project>

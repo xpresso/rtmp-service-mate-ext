@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!--
+	@author Yura Zhloba
+-->
+<s:Application
+		xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:mx="library://ns.adobe.com/flex/mx"
+		xmlns:local="*">
+
+	<fx:Declarations>
+		<s:TraceTarget fieldSeparator=" : " includeCategory="true" includeLevel="true" />
+		<local:MainMap/>
+	</fx:Declarations>
+
+	<fx:Script><![CDATA[
+		import events.LoginEvent;
+		import events.MessageEvent;
+
+		import events.RoomEvent;
+
+		import mx.collections.ArrayCollection;
+
+		import vo.Message;
+
+		[Bindable]
+		public var appState : uint;
+
+		[Bindable]
+		public var userName : String = '';
+
+		[Bindable]
+		public var rooms : ArrayCollection;
+
+		[Bindable]
+		public var roomName : String;
+
+		[Bindable]
+		public var outputText : String;
+
+		private function login() : void
+		{
+			var event : LoginEvent = new LoginEvent();
+			event.userName = tiName.text;
+			dispatchEvent(event);
+		}
+
+		private function joinRoom() : void
+		{
+			var event : RoomEvent = new RoomEvent(RoomEvent.JOIN);
+			event.roomName = lRooms.selectedItem;
+			dispatchEvent(event);
+		}
+
+		private function send() : void
+		{
+			var event : MessageEvent = new MessageEvent();
+			event.message = new Message();
+			event.message.senderName = userName;
+			event.message.content = input.text;
+			dispatchEvent(event);
+
+			input.text = '';
+		}
+
+		]]></fx:Script>
+
+	<mx:ViewStack selectedIndex="{appState}" width="100%" height="100%">
+
+		<s:NavigatorContent>
+			<s:Label text="Connecting ..."/>
+		</s:NavigatorContent>
+
+		<s:NavigatorContent>
+			<s:HGroup verticalAlign="middle" verticalCenter="0" horizontalCenter="0">
+				<s:Label text="Name:"/>
+				<s:TextInput id="tiName"/>
+				<s:Button label="Log In" click="login()"/>
+			</s:HGroup>
+		</s:NavigatorContent>
+
+		<s:NavigatorContent>
+			<s:VGroup verticalCenter="0" horizontalCenter="0">
+				<s:Label text="Select Room:"/>
+				<s:List id="lRooms" dataProvider="{rooms}" change="joinRoom()"/>
+			</s:VGroup>
+		</s:NavigatorContent>
+
+		<s:NavigatorContent>
+			<s:VGroup width="100%" height="100%">
+				<s:Label text="{roomName}"/>
+				<s:TextArea id="output" text="{outputText}" width="100%" height="100%"/>
+				<s:HGroup width="100%">
+					<s:TextInput id="input" width="100%" height="30"/>
+					<s:Button label="Send" height="30" click="send()"/>
+				</s:HGroup>
+			</s:VGroup>
+		</s:NavigatorContent>
+
+	</mx:ViewStack>
+
+</s:Application>

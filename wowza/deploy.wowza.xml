@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="deploy to wowza" default="deploy" basedir="../">
+
+	<property name="dest" value="/usr/local/WowzaMediaServer/"/>
+	<property name="src" value="wowza/dist/"/>
+
+	<target name="clean">
+		<delete includeEmptyDirs="true">
+			<fileset dir="${dest}applications">
+				<include name="rtmp-service-mate-ext"/>
+			</fileset>
+			<fileset  dir="${dest}conf">
+				<include name="rtmp-service-mate-ext/Application.xml"/>
+				<include name="rtmp-service-mate-ext"/>
+			</fileset>
+			<fileset  dir="${dest}lib">
+				<include name="rtmp-service-mate-ext.jar"/>
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="deploy" depends="clean">
+		<copy todir="${dest}">
+			<fileset dir="${src}">
+				<include name="*/**"/>
+				<include name="*"/>
+			</fileset>
+		</copy>
+		<jar basedir="out/production/wowza" destfile="${dest}lib/rtmp-service-mate-ext.jar"/>
+	</target>
+
+</project>

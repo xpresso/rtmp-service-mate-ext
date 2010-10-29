@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="deploy to fms" default="deploy" basedir="../">
+
+	<property name="dest" value="/opt/fms/apps/rtmp-service-mate-ext/"/>
+	<property name="src" value="fms/src/"/>
+
+	<target name="init">
+		<mkdir dir="${dest}"/>
+	</target>
+
+	<target name="clean">
+		<delete includeEmptyDirs="true">
+			<fileset dir="${dest}">
+				<include name="*/**"/>
+				<include name="*"/>
+				<exclude name="sharedobjects/**"/>
+				<exclude name="streams/**"/>
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="deploy" depends="init,clean">
+		<copy todir="${dest}">
+			<fileset dir="${src}">
+				<include name="*.asc"/>
+			</fileset>
+		</copy>
+	</target>
+
+</project>

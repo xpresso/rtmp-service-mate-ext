@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!--
+	@author Yura Zhloba
+-->
+<mate:EventMap
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        xmlns:mx="library://ns.adobe.com/flex/halo"
+        xmlns:mate="http://mate.asfusion.com/"
+        xmlns:rtmp="com.flashdevs.mateExt.rtmpService.mate.*">
+
+    <fx:Script><![CDATA[
+
+        import com.asfusion.mate.utils.debug.Debugger;
+        import com.flashdevs.mateExt.rtmpService.RtmpService;
+        import com.flashdevs.mateExt.rtmpService.events.RtmpDataEvent;
+        import com.flashdevs.mateExt.rtmpService.events.RtmpStatusEvent;
+
+        import events.LoginEvent;
+        import events.MessageEvent;
+
+        import events.RoomEvent;
+
+        import mx.events.FlexEvent;
+        ]]></fx:Script>
+
+    <fx:Declarations>
+        <mate:Debugger level="{Debugger.ALL}"/>
+
+        <mate:Injectors target="{ExampleApp}">
+            <mate:PropertyInjector source="{MainManager}"
+                                   targetKey="appState" sourceKey="appState"/>
+            <mate:PropertyInjector source="{MainManager}"
+                                   targetKey="userName" sourceKey="userName"/>
+            <mate:PropertyInjector source="{MainManager}"
+                                   targetKey="rooms" sourceKey="rooms"/>
+            <mate:PropertyInjector source="{MainManager}"
+                                   targetKey="roomName" sourceKey="roomName"/>
+            <mate:PropertyInjector source="{MainManager}"
+                                   targetKey="outputText" sourceKey="outputText"/>
+        </mate:Injectors>
+
+		<mate:Injectors target="{RtmpService}" debug="true">
+			<mate:PropertyInjector source="{scope}"
+								   targetKey="dispatcher" sourceKey="dispatcher"/>			
+		</mate:Injectors>
+
+        <mate:EventHandlers type="{FlexEvent.INITIALIZE}">
+            <mate:MethodInvoker generator="{RtmpService}"
+                                method="connect" arguments="{'rtmp://localhost/rtmp-service-mate-ext/'}"/>
+            <rtmp:CallbackRegistrator action="newMessage" target="{MainManager}" method="onNewMessage"/>
+        </mate:EventHandlers>
+
+        <mate:EventHandlers type="{RtmpStatusEvent.SUCCESS}">
+            <mate:MethodInvoker generator="{MainManager}"
+                                method="onConnect" arguments="{[]}"/>
+        </mate:EventHandlers>
+
+        <mate:EventHandlers type="{LoginEvent.LOGIN}">
+            <rtmp:RtmpServiceInvoker service="{RtmpService}">
+
+                <mate:Request action="login" arguments="{[event.userName]}"/>
+
+                <rtmp:resultHandlers>
+                    <mate:MethodInvoker generator="{MainManager}"
+                                        method="onLogin" arguments="{[currentEvent.data]}"/>
+                    <mate:EventAnnouncer generator="{RoomEvent}" type="{RoomEvent.LOAD_LIST}"/>
+                </rtmp:resultHandlers>
+
+                <rtmp:faultHandlers>
+                    <mate:MethodInvoker generator="{MainManager}"
+                                        method="onError" arguments="{[currentEvent]}"/>
+                </rtmp:faultHandlers>
+            </rtmp:RtmpServiceInvoker>
+        </mate:EventHandlers>
+
+        <mate:EventHandlers type="{RoomEvent.LOAD_LIST}">
+            <rtmp:RtmpServiceInvoker service="{RtmpService}">
+
+                <mate:Request action="getRooms"/>
+
+                <rtmp:resultHandlers>
+                    <mate:MethodInvoker generator="{MainManager}"
+                                        method="onRooms" arguments="{[currentEvent.data]}"/>
+                </rtmp:resultHandlers>
+
+                <rtmp:faultHandlers>
+                    <mate:MethodInvoker generator="{MainManager}"
+                                        method="onError" arguments="{[currentEvent]}"/>
+                </rtmp:faultHandlers>
+            </rtmp:RtmpServiceInvoker>
+        </mate:EventHandlers>
+
+
+        <mate:EventHandlers type="{RoomEvent.JOIN}">
+            <rtmp:RtmpServiceInvoker service="{RtmpService}">
+
+                <mate:Request action="joinRoom" arguments="{[event.roomName]}"/>
+
+                <rtmp:resultHandlers>
+                    <mate:MethodInvoker generator="{MainManager}"
+                                        method="onJoinRoom" arguments="{[currentEvent.data]}"/>
+                </rtmp:resultHandlers>
+
+                <rtmp:faultHandlers>
+                    <mate:MethodInvoker generator="{MainManager}"
+                                        method="onError" arguments="{[currentEvent]}"/>
+                </rtmp:faultHandlers>
+            </rtmp:RtmpServiceInvoker>
+
+        </mate:EventHandlers>
+
+        <mate:EventHandlers type="{MessageEvent.SEND}">
+            <rtmp:RtmpServiceInvoker service="{RtmpService}">
+
+                <mate:Request action="sendMessage" arguments="{[event.message]}"/>
+
+                <rtmp:resultHandlers>
+                    <mate:MethodInvoker generator="{MainManager}"
+                                        method="onSendMessage" arguments="{[currentEvent.data]}"/>
+                </rtmp:resultHandlers>
+
+                <rtmp:faultHandlers>
+                    <mate:MethodInvoker generator="{MainManager}"
+                                        method="onError" arguments="{[currentEvent]}"/>
+                </rtmp:faultHandlers>
+            </rtmp:RtmpServiceInvoker>
+        </mate:EventHandlers>
+
+        <mate:EventHandlers type="{RtmpDataEvent.DATA}" debug="true">
+        </mate:EventHandlers>
+
+    </fx:Declarations>
+
+</mate:EventMap>

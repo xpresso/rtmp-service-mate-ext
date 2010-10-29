@@ -1,0 +1,48 @@
+<Root>
+	<Application>
+
+		<Connections>
+			<AutoAccept>true</AutoAccept>
+		</Connections>
+
+		<Streams>
+			<StreamType>live-lowlatency</StreamType>
+			<StorageDir></StorageDir>
+		</Streams>
+
+		<SharedObjects>
+			<StorageDir></StorageDir>
+		</SharedObjects>
+
+		<Client>
+			<IdleFrequency>-1</IdleFrequency>
+		</Client>
+
+		<Modules>
+			<Module>
+				<Name>base</Name>
+				<Description>Base</Description>
+				<Class>com.wowza.wms.module.ModuleCore</Class>
+			</Module>
+			<Module>
+				<Name>properties</Name>
+				<Description>Properties</Description>
+				<Class>com.wowza.wms.module.ModuleProperties</Class>
+			</Module>
+			<Module>
+				<Name>logging</Name>
+				<Description>Client Logging</Description>
+				<Class>com.wowza.wms.module.ModuleClientLogging</Class>
+			</Module>
+			<Module>
+				<Name>rtmp-service-mate-ext</Name>
+				<Description>rtmp-service-mate-ext</Description>
+				<Class>example.ExampleApp</Class>
+			</Module>
+		</Modules>
+
+		<Properties>
+		</Properties>
+
+	</Application>
+</Root>

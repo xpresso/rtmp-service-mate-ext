@@ -2,7 +2,7 @@
 <project name="deploy to red5" default="deploy" basedir="../">
 
 	<property name="dest" value="/opt/red5/dist/webapps/rtmp-service-mate-ext/"/>
-	<property name="src" value="red5/www/"/>
+	<property name="src" value="red5-example/src/main/resources/"/>
 
 	<target name="init">
 		<mkdir dir="${dest}"/>
@@ -24,10 +24,9 @@
 				<include name="*"/>
 			</fileset>
 		</copy>
-		<copy todir="${dest}WEB-INF/classes">
-			<fileset dir="out/production/red5/">
-				<include name="*/**"/>
-				<include name="*/**/*"/>
+		<copy todir="${dest}WEB-INF/lib">
+			<fileset dir="red5-example/target">
+				<include name="*.jar"/>
 			</fileset>
 		</copy>
 	</target>

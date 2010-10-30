@@ -17,7 +17,8 @@
 	</properties>
 
 	<modules>
-		<module>fms</module>
+		<module>fms-example</module>
+		<module>red5-example</module>
 		<module>rtmp-service</module>
 		<module>usage-example</module>
 	</modules>

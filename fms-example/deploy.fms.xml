@@ -2,7 +2,7 @@
 <project name="deploy to fms" default="deploy" basedir="../">
 
 	<property name="dest" value="/opt/fms/apps/rtmp-service-mate-ext/"/>
-	<property name="src" value="fms/src/main/javascript/"/>
+	<property name="src" value="fms-example/src/main/javascript/"/>
 
 	<target name="init">
 		<mkdir dir="${dest}"/>

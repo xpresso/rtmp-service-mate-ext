@@ -2,31 +2,35 @@
 <project name="deploy to wowza" default="deploy" basedir="../">
 
 	<property name="dest" value="/usr/local/WowzaMediaServer/"/>
-	<property name="src" value="wowza/dist/"/>
 
 	<target name="clean">
+		<mkdir dir="${dest}applications/rtmp-service-mate-ext"/>
+		<mkdir dir="${dest}conf/rtmp-service-mate-ext"/>
+
 		<delete includeEmptyDirs="true">
 			<fileset dir="${dest}applications">
-				<include name="rtmp-service-mate-ext"/>
+				<include name="rtmp-service-mate-ext/*"/>
 			</fileset>
 			<fileset  dir="${dest}conf">
 				<include name="rtmp-service-mate-ext/Application.xml"/>
-				<include name="rtmp-service-mate-ext"/>
 			</fileset>
 			<fileset  dir="${dest}lib">
-				<include name="rtmp-service-mate-ext.jar"/>
+				<include name="wowza-example-1.0.0-SNAPSHOT.jar"/>
 			</fileset>
 		</delete>
 	</target>
 
 	<target name="deploy" depends="clean">
-		<copy todir="${dest}">
-			<fileset dir="${src}">
-				<include name="*/**"/>
-				<include name="*"/>
+		<copy todir="${dest}conf/rtmp-service-mate-ext">
+			<fileset dir="wowza-example/src/main/resources">
+				<include name="Application.xml"/>
 			</fileset>
 		</copy>
-		<jar basedir="out/production/wowza" destfile="${dest}lib/rtmp-service-mate-ext.jar"/>
+		<copy todir="${dest}lib">
+			<fileset dir="wowza-example/target">
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
 	</target>
 
 </project>

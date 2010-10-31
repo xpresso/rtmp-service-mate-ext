@@ -21,6 +21,7 @@
 		<module>red5-example</module>
 		<module>rtmp-service</module>
 		<module>usage-example</module>
+		<module>wowza-example</module>
 	</modules>
 
 	<build>

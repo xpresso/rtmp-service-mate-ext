@@ -58,9 +58,11 @@
 					<configuration>
 						<debug>true</debug>
 						<targetPlayer>${fp.version}</targetPlayer>
+						<!-- NOTE: not woking
 						<warnings>
 							<noConstructor>false</noConstructor>
 						</warnings>
+						-->
 					</configuration>
 
 				</plugin>

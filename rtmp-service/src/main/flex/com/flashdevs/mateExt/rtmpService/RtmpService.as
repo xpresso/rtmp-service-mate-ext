@@ -3,6 +3,14 @@
  *
  * Collaborate with rtmp server (FMS, Wowza, Red5)
  * Can be used without Mate
+ *
+ * If you want to work with RtmpService from Mate event map, add this to map:
+ * <mt:Injectors target="{RtmpService}">
+ *     <mt:PropertyInjector source="{scope}" targetKey="dispatcher" sourceKey="dispatcher"/>
+ * </mt:Injectors>
+ *
+ * otherwise default EventDispatcher will be used and event can`t be catch in Mate event map.   
+ *
  */
 package com.flashdevs.mateExt.rtmpService
 {

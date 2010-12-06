@@ -38,6 +38,7 @@ public class RtmpService extends EventDispatcher
 	protected var _client : RtmpClient = new RtmpClient();
 
 
+	protected var _defaultDispatcher : IEventDispatcher = new EventDispatcher();
 	protected var _dispatcher : IEventDispatcher;
 
 	public function get dispatcher() : IEventDispatcher
@@ -63,9 +64,7 @@ public class RtmpService extends EventDispatcher
 
 		if(dispatcher == null)
 		{
-			logger.warn('use simple dispatcher, events can`t be catched in Mate EventMap');
-
-			_dispatcher = new EventDispatcher();
+			_dispatcher = _defaultDispatcher;
 		}
 		else _dispatcher = dispatcher;
 
@@ -140,6 +139,9 @@ public class RtmpService extends EventDispatcher
 	{
 		logger.info('onResult ' + data);
 
+		if(_dispatcher == _defaultDispatcher)
+			logger.warn("default dispatcher used, event can`t be catch in mate event map");
+		
 		_dispatcher.dispatchEvent(new RtmpResultEvent().init(data));
 	}
 
@@ -153,6 +155,9 @@ public class RtmpService extends EventDispatcher
 	protected function onNetStatus(e : NetStatusEvent) : void
 	{
 		logger.info('onNetStatus ' + e.info.level + ' ' + e.info.code);
+
+		if(_dispatcher == _defaultDispatcher)
+			logger.warn("default dispatcher used, event can`t be catch in mate event map");
 
 		switch(e.info.code)
 		{

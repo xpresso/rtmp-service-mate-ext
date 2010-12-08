@@ -68,7 +68,7 @@ public class RtmpService extends EventDispatcher
 	{
 		super();
 
-		logger.info('instance created');
+		logger.debug('instance created');
 
 		if(dispatcher == null)
 		{
@@ -129,14 +129,14 @@ public class RtmpService extends EventDispatcher
 
 	public function registerCallback(methodName : String, callback : Function) : void
 	{
-		logger.info('registerCallback [' + methodName + ']');
+		logger.debug('registerCallback [' + methodName + ']');
 
 		_client[methodName] = callback;
 	}
 
 	public function call(methodName : String, ... args) : void
 	{
-		logger.info('call [' + methodName + ']', args);
+		logger.debug('call [' + methodName + ']', args);
 
 		args.unshift(new Responder(onResult, onCallStatus));
 		args.unshift(methodName);
@@ -145,7 +145,7 @@ public class RtmpService extends EventDispatcher
 
 	protected function onResult(data : *) : void
 	{
-		logger.info('onResult ' + data);
+		logger.debug('onResult ' + data);
 
 		if(_dispatcher == _defaultDispatcher)
 			logger.warn("default dispatcher used, event can`t be catch in mate event map");

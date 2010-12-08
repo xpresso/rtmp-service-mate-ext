@@ -22,7 +22,7 @@ internal class RtmpClient extends Proxy
 
 	flash_proxy override function setProperty(name : *, value : *) : void
 	{
-		logger.info('add callback [' + name + ']');
+		logger.debug('add callback [' + name + ']');
 
 		callbacks[name] = value;
 	}
@@ -32,7 +32,7 @@ internal class RtmpClient extends Proxy
 
 	flash_proxy override function callProperty(name : *, ... args) : *
 	{
-		logger.info('callProperty [' + name + ']', args);
+		logger.debug('callProperty [' + name + ']', args);
 
 		this[name].apply(this, args);
 		return true;
@@ -40,17 +40,17 @@ internal class RtmpClient extends Proxy
 
 	flash_proxy override function getProperty(name : *) : *
 	{
-		logger.info('getProperty [' + name + ']');
+		logger.debug('getProperty [' + name + ']');
 
 		if(callbacks[name])
 		{
-			logger.info('use callback [' + name + ']');
+			logger.debug('use callback [' + name + ']');
 			return callbacks[name];
 		}
 
 		return function(... args) : *
 		{
-			logger.info('dispatch RtmpDataEvent [' + name + ']', args);
+			logger.debug('dispatch RtmpDataEvent [' + name + ']', args);
 
 			dispatcher.dispatchEvent(new RtmpDataEvent().init(name, args));
 

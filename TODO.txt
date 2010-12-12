@@ -1,0 +1,27 @@
+- rtmp-service-mate-ext
+  - bolshaja beda -- ne vizhy isklychenij
+    nado smotret', kak ja podklychalsja k Mate loggery
+  - nyzhen defoltnyj error handler, esli ne zadan javno
+  - ant scripty dolzhny ne tolko deploy, no takzhe compile i jar
+  - article to blog: gettings stated with red5 and wowza
+    na primere rtmp-service-mate-ext
+	- englishe verions srazy, link s google coda
+  - nyzhno rasshirit' funktsional example app, chtoby shire usalis' callbacki
+    - show user list for room
+	- callback 'onUserJoin'
+  - brosat' exception, esli v registerCallback kto-to popytaetsja
+    zamestit' uzhe suschestvujuschij callback
+	  - net, luchshe razreshit' neskolko callback na odin action
+	- @to objazatelno opisat' v documentatsii
+  - najti vse mesta vo vseh classah, gde nyzhno obrabotat' oshibki,
+    rasstavit' isklychenija, protestit' isklychenija
+  - peresmotret' code na predmet stilja i prochego
+  - ASDoc commentarii v code
+  - rassmotret' variant, kogda mate event handler rabotaet kak callback
+    - togda registerEventHandler vmesto registerCallback
+  - documentatsija
+    - normalnja doca na googlecode vmesto stat'ji
+	  (stat'ju mozhno zalinkovat')
+	- opisat' novye fichi, s primerami (3 sposoba obraboki fms callback)
+	- novaja stat'ja v bloge, s opisaniem novyh fich
+  - mozhno sdelat' analogichno dlja binarnogo socketa, ne tolko dlja rtmp

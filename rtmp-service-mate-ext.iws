@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53d08c45-9ad3-47bc-9794-7fecd51da677" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fms-example/fms-example.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/red5-example/red5-example.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rtmp-service-mate-ext.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rtmp-service/rtmp-service.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/usage-example/usage-example.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wowza-example/wowza-example.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/dependency-sample.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/install-artifact.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service-mate-ext.iws" afterPath="$PROJECT_DIR$/rtmp-service-mate-ext.iws" />
     </list>
     <ignored path="rtmp-service-mate-ext.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,6 +61,9 @@
   <component name="FavoritesManager">
     <favorites_list name="rtmp-service-mate-ext" />
   </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -73,6 +72,14 @@
   <component name="Git.Settings">
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/release/dependency-sample.xml" />
+        <option value="$PROJECT_DIR$/release/install.sh" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -164,6 +171,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rtmp-service-mate-ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtmp-service-mate-ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtmp-service-mate-ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="release" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,7 +367,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1440" height="875" extended-state="1" />
+    <frame x="0" y="25" width="1440" height="875" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -402,6 +423,29 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/rtmp-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="21" selection-start="456" selection-end="456" vertical-scroll-proportion="0.3152639">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/install-artifact.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="189" selection-end="189" vertical-scroll-proportion="0.2107438">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/dependency-sample.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="104" selection-end="109" vertical-scroll-proportion="0.07024793">
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

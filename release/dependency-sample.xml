@@ -1,0 +1,6 @@
+<dependency>
+	<artifactId>rtmp-service</artifactId>
+	<groupId>com.flashdevs.mateExt</groupId>
+	<version>1.2.0</version>
+	<type>swc</type>
+</dependency>

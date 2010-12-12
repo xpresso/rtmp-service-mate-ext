@@ -1,6 +1,2 @@
-.idea
-*.iml
-*.ipr
-*.iws
+*.swp
 target
-*_config.xml

@@ -31,7 +31,7 @@ import flash.net.Responder;
 import mx.logging.ILogger;
 import mx.logging.Log;
 
-public class RtmpService extends EventDispatcher
+public class RtmpService
 {
 	// properties
 	protected var _netConnection : NetConnection;
@@ -209,7 +209,7 @@ public class RtmpService extends EventDispatcher
 		logger.error('AsyncError ' + e.toString());
 	}
 
-	override public function toString() : String
+	public function toString() : String
 	{ return 'RtmpService'; }
 }
 }

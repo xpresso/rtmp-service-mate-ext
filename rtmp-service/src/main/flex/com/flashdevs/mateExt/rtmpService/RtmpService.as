@@ -55,6 +55,7 @@ public class RtmpService
 	public function set dispatcher(value : IEventDispatcher) : void
 	{ _dispatcher = value; }
 
+	public var warnAboutDefaultDispatcher : Boolean = true;
 
 	private var logger : ILogger = Log.getLogger('RtmpService');
 
@@ -147,7 +148,7 @@ public class RtmpService
 	{
 		logger.debug('onResult ' + data);
 
-		if(_dispatcher == _defaultDispatcher)
+		if(warnAboutDefaultDispatcher && _dispatcher == _defaultDispatcher)
 			logger.warn("default dispatcher used, event can`t be catch in mate event map");
 		
 		_dispatcher.dispatchEvent(new RtmpResultEvent().init(data));
@@ -164,7 +165,7 @@ public class RtmpService
 	{
 		logger.info('onNetStatus ' + e.info.level + ' ' + e.info.code);
 
-		if(_dispatcher == _defaultDispatcher)
+		if(warnAboutDefaultDispatcher && _dispatcher == _defaultDispatcher)
 			logger.warn("default dispatcher used, event can`t be catch in mate event map");
 
 		switch(e.info.code)

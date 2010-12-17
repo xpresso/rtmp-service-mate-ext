@@ -8,7 +8,7 @@ import flash.events.Event;
 public class RtmpErrorEvent extends Event
 {
 	// constants
-	static public const ERROR : String = 'onRtmpError';
+	static public const ERROR : String = "onRtmpError";
 
 	// properties
 	public var code : String;

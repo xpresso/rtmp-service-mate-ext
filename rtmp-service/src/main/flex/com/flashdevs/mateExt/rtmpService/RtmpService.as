@@ -44,7 +44,6 @@ public class RtmpService
 
 
 	// TODO -- send instID to constructor and use for logger
-	// TODO -- change ' to " everywhere
 	protected var _client : RtmpClient = new RtmpClient();
 
 

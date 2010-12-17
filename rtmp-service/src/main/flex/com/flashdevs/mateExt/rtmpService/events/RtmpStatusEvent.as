@@ -8,12 +8,12 @@ import flash.events.Event;
 public class RtmpStatusEvent extends Event
 {
 	// constants
-	static public const SUCCESS : String = 'rtmpConnectionSuccess';
-	static public const FAILED : String = 'rtmpConnectionFailed';
-	static public const REJECTED : String = 'rtmpConnectionRejected';
-	static public const DISCONNECTED : String = 'rtmpConnectionDisconnected';
-	static public const TRY_RECONNECT : String = 'rtmpTryReconnect';
-	static public const RECONNECT_FAILED : String = 'rtmpReconnectFailed';
+	static public const SUCCESS : String = "rtmpConnectionSuccess";
+	static public const FAILED : String = "rtmpConnectionFailed";
+	static public const REJECTED : String = "rtmpConnectionRejected";
+	static public const DISCONNECTED : String = "rtmpConnectionDisconnected";
+	static public const TRY_RECONNECT : String = "rtmpTryReconnect";
+	static public const RECONNECT_FAILED : String = "rtmpReconnectFailed";
 
 	// properties
 
@@ -30,6 +30,6 @@ public class RtmpStatusEvent extends Event
 	}
 
 	public override function toString() : String
-	{ return 'RtmpStatusEvent'; }
+	{ return "RtmpStatusEvent"; }
 }
 }

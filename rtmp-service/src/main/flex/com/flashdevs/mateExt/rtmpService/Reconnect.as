@@ -22,7 +22,7 @@ internal class Reconnect
 	private var timer : Timer;
 	private var service : RtmpService;
 
-	private var log : ILogger = Log.getLogger('RtmpService');
+	private var log : ILogger = Log.getLogger("RtmpService");
 
 	public function Reconnect(service : RtmpService) : void
 	{
@@ -63,6 +63,6 @@ internal class Reconnect
 	}
 
 	public function toString() : String
-	{ return 'Reconnect'; }
+	{ return "Reconnect"; }
 }
 }

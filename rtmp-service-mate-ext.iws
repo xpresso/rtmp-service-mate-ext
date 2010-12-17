@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53d08c45-9ad3-47bc-9794-7fecd51da677" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fms-example/src/main/javascript/main.asc" afterPath="$PROJECT_DIR$/fms-example/src/main/javascript/main.asc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service-mate-ext.ipr" afterPath="$PROJECT_DIR$/rtmp-service-mate-ext.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service-mate-ext.iws" afterPath="$PROJECT_DIR$/rtmp-service-mate-ext.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/Reconnect.as" afterPath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/Reconnect.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpClient.as" afterPath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpClient.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpService.as" afterPath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpService.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpDataEvent.as" afterPath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpDataEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpErrorEvent.as" afterPath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpErrorEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpResultEvent.as" afterPath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpResultEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpStatusEvent.as" afterPath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpStatusEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/CallbackRegistrator.as" afterPath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/CallbackRegistrator.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/RtmpServiceInvoker.as" afterPath="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/RtmpServiceInvoker.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage-example/src/main/flex/ExampleApp.mxml" afterPath="$PROJECT_DIR$/usage-example/src/main/flex/ExampleApp.mxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage-example/src/main/flex/MainManager.as" afterPath="$PROJECT_DIR$/usage-example/src/main/flex/MainManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage-example/src/main/flex/events/LoginEvent.as" afterPath="$PROJECT_DIR$/usage-example/src/main/flex/events/LoginEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage-example/src/main/flex/events/MessageEvent.as" afterPath="$PROJECT_DIR$/usage-example/src/main/flex/events/MessageEvent.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage-example/src/main/flex/events/RoomEvent.as" afterPath="$PROJECT_DIR$/usage-example/src/main/flex/events/RoomEvent.as" />
     </list>
     <ignored path="rtmp-service-mate-ext.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,53 +76,7 @@
     <favorites_list name="rtmp-service-mate-ext" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="RtmpServiceInvoker.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/RtmpServiceInvoker.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="77" selection-start="2241" selection-end="2241" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RtmpService.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpService.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="5" selection-start="3897" selection-end="3897" vertical-scroll-proportion="0.41067284">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RtmpResultEvent.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpResultEvent.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="25" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RtmpDataEvent.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpDataEvent.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RtmpClient.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpClient.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -122,9 +90,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/release/dependency-sample.xml" />
         <option value="$PROJECT_DIR$/release/install.sh" />
+        <option value="$PROJECT_DIR$/usage-example/src/main/flex/MainManager.as" />
+        <option value="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpClient.as" />
+        <option value="$PROJECT_DIR$/fms-example/src/main/javascript/main.asc" />
+        <option value="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/Reconnect.as" />
         <option value="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpService.as" />
+        <option value="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpDataEvent.as" />
+        <option value="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpErrorEvent.as" />
+        <option value="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpResultEvent.as" />
+        <option value="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpStatusEvent.as" />
+        <option value="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/CallbackRegistrator.as" />
+        <option value="$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/RtmpServiceInvoker.as" />
+        <option value="$PROJECT_DIR$/usage-example/src/main/flex/ExampleApp.mxml" />
+        <option value="$PROJECT_DIR$/usage-example/src/main/flex/events/LoginEvent.as" />
+        <option value="$PROJECT_DIR$/usage-example/src/main/flex/events/MessageEvent.as" />
+        <option value="$PROJECT_DIR$/usage-example/src/main/flex/events/RoomEvent.as" />
       </list>
     </option>
   </component>
@@ -203,7 +184,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -301,43 +282,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rtmp-service-mate-ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rtmp-service-mate-ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rtmp-service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rtmpService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -513,23 +460,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="27" width="1610" height="1023" extended-state="1" />
-    <editor active="true" />
+    <frame x="68" y="27" width="1610" height="1023" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32904056" sideWeight="0.5232816" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33354798" sideWeight="0.5232816" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24983902" sideWeight="0.5232816" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24983902" sideWeight="0.6707317" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4767184" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4767184" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -571,87 +518,124 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rtmp-service/pom.xml">
+    <entry file="file://$PROJECT_DIR$/usage-example/src/main/flex/MainManager.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="21" selection-start="456" selection-end="456" vertical-scroll-proportion="0.3152639" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/install-artifact.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="189" selection-end="189" vertical-scroll-proportion="0.2107438" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/dependency-sample.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="104" selection-end="109" vertical-scroll-proportion="0.07024793" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/CallbackRegistrator.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.48056537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/Reconnect.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="226" selection-end="226" vertical-scroll-proportion="0.20023558">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpErrorEvent.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpStatusEvent.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpDataEvent.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpResultEvent.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="25" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/asfusion/mate/mate-framework/0.8.9/mate-framework-0.8.9.swc!/library.swf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="285" column="28" selection-start="12056" selection-end="12056" vertical-scroll-proportion="0.33333334">
+        <state line="95" column="26" selection-start="1893" selection-end="1894" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpClient.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
+        <state line="42" column="45" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/RtmpServiceInvoker.as">
+    <entry file="file://$PROJECT_DIR$/fms-example/src/main/javascript/main.asc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="77" selection-start="2241" selection-end="2241" vertical-scroll-proportion="0.0">
+        <state line="62" column="41" selection-start="1199" selection-end="1200" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/Reconnect.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="24" selection-start="1562" selection-end="1563" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/RtmpService.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="5" selection-start="3897" selection-end="3897" vertical-scroll-proportion="0.41067284">
+        <state line="46" column="39" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpDataEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="52" selection-start="215" selection-end="216" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpErrorEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="54" selection-start="218" selection-end="219" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpResultEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="54" selection-start="219" selection-end="220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage-example/src/main/flex/events/RoomEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="27" selection-start="541" selection-end="541" vertical-scroll-proportion="0.5057208">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage-example/src/main/flex/events/MessageEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="53" selection-start="201" selection-end="202" vertical-scroll-proportion="0.23340961">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage-example/src/main/flex/events/LoginEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="52" selection-start="178" selection-end="179" vertical-scroll-proportion="0.19450802">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage-example/src/main/flex/MainMap.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="61" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.21967964">
+          <folding>
+            <marker date="1291635055000" expanded="true" signature="372:759" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage-example/src/main/flex/ExampleApp.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="27" selection-start="1337" selection-end="1338" vertical-scroll-proportion="0.21967964">
+          <folding>
+            <marker date="1292578484000" expanded="true" signature="394:534" placeholder="..." />
+            <marker date="1292578484000" expanded="true" signature="813:922" placeholder="{...}" />
+            <marker date="1292578484000" expanded="true" signature="963:1092" placeholder="{...}" />
+            <marker date="1292578484000" expanded="true" signature="1129:1343" placeholder="{...}" />
+            <marker date="1292578484000" expanded="true" signature="1714:1721" placeholder="{...}" />
+            <marker date="1292578484000" expanded="true" signature="1932:1942" placeholder="{...}" />
+            <marker date="1292578484000" expanded="true" signature="2291:2297" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/RtmpServiceInvoker.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="33" selection-start="2494" selection-end="2495" vertical-scroll-proportion="0.8443936">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/mate/CallbackRegistrator.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="34" selection-start="2159" selection-end="2160" vertical-scroll-proportion="0.8443936">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtmp-service/src/main/flex/com/flashdevs/mateExt/rtmpService/events/RtmpStatusEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="30" selection-start="926" selection-end="927" vertical-scroll-proportion="0.6224256">
           <folding />
         </state>
       </provider>

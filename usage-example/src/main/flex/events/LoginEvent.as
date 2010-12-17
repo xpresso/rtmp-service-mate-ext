@@ -8,7 +8,7 @@ import flash.events.Event;
 public class LoginEvent extends Event
 {
 	// constants
-	static public const LOGIN : String = 'userLogin';
+	static public const LOGIN : String = "userLogin";
 
 	// properties
 	public var userName : String;

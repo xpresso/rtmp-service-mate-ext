@@ -10,7 +10,7 @@ import vo.Message;
 public class MessageEvent extends Event
 {
 	// constants
-	static public const SEND : String = 'sendMessage';
+	static public const SEND : String = "sendMessage";
 
 	// properties
 	public var message : Message;

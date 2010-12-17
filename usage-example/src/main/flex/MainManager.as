@@ -19,7 +19,7 @@ public class MainManager
 	public var appState : int = AppState.CONNECTING;
 
 	[Bindable]
-	public var userName : String = '';
+	public var userName : String = "";
 
 	[Bindable]
 	public var rooms : ArrayCollection;
@@ -28,27 +28,27 @@ public class MainManager
 	public var roomName : String;
 
 	[Bindable]
-	public var outputText : String = '';
+	public var outputText : String = "";
 
-	private var log : ILogger = Log.getLogger('MainManager');
+	private var log : ILogger = Log.getLogger("MainManager");
 
 	public function onConnect() : void
 	{
-		log.info('onConnect');
+		log.info("onConnect");
 
 		appState = AppState.LOGIN;
 	}
 
 	public function onLogin(userName : String) : void
 	{
-		log.info('onLogin [{0}]', userName);
+		log.info("onLogin [{0}]", userName);
 
 		this.userName = userName;
 	}
 
 	public function onRooms(rooms : Array) : void
 	{
-		log.info('onRooms [{0}]', rooms);
+		log.info("onRooms [{0}]", rooms);
 
 		this.rooms = new ArrayCollection(rooms);
 		appState = AppState.SELECT_ROOM;
@@ -56,7 +56,7 @@ public class MainManager
 
 	public function onJoinRoom(roomName : String) : void
 	{
-		log.info('onJoinRoom [{0}]', roomName);
+		log.info("onJoinRoom [{0}]", roomName);
 
 		this.roomName = roomName;
 		appState = AppState.CHAT;
@@ -64,7 +64,7 @@ public class MainManager
 
 	public function onSendMessage(data : Object) : void
 	{
-		log.info('onSendMessage [{0}]', data);
+		log.info("onSendMessage [{0}]", data);
 	}
 
 	public function onNewMessage(data : Object) : void
@@ -83,16 +83,16 @@ public class MainManager
 			message.content = data.content;
 		}
 
-		log.info('onNewMessage {0} {1}', message.senderName, message.content);
-		outputText += message.senderName + ': ' + message.content + '\n';
+		log.info("onNewMessage {0} {1}", message.senderName, message.content);
+		outputText += message.senderName + ": " + message.content + "\n";
 	}
 
 	public function onError(event : RtmpErrorEvent) : void
 	{
-		log.error('onError {0} {1} {2}', event.level, event.code, event.description);
+		log.error("onError {0} {1} {2}", event.level, event.code, event.description);
 	}
 
 	public function toString() : String
-	{ return 'MainManager'; }
+	{ return "MainManager"; }
 }
 }

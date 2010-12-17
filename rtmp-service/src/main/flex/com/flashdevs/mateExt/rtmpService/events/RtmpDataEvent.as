@@ -8,7 +8,7 @@ import flash.events.Event;
 public class RtmpDataEvent extends Event
 {
 	// constants
-	static public const DATA : String = 'onRtmpData';
+	static public const DATA : String = "onRtmpData";
 
 	// properties
 	public var methodName : String;

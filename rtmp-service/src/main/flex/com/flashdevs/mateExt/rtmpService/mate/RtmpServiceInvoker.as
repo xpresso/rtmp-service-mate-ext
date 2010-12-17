@@ -12,7 +12,7 @@ import com.asfusion.mate.core.*;
 import com.flashdevs.mateExt.rtmpService.events.RtmpErrorEvent;
 import com.flashdevs.mateExt.rtmpService.events.RtmpResultEvent;
 
-[DefaultProperty('request')]
+[DefaultProperty("request")]
 public class RtmpServiceInvoker extends AbstractServiceInvoker implements IAction
 {
 	// properties
@@ -24,12 +24,12 @@ public class RtmpServiceInvoker extends AbstractServiceInvoker implements IActio
 
 	private var _callParams : Array;
 
-	private var _cache : String = 'inherit';
+	private var _cache : String = "inherit";
 
 	public function get cache() : String
 	{ return _cache; }
 
-	[Inspectable(enumeration='local,global,inherit,none')]
+	[Inspectable(enumeration="local,global,inherit,none")]
 	public function set cache(value : String) : void
 	{ _cache = value; }
 
@@ -39,14 +39,14 @@ public class RtmpServiceInvoker extends AbstractServiceInvoker implements IActio
 	{
 		super.prepare(scope);
 
-		if(service == null) throw new Error('service must be set');
+		if(service == null) throw new Error("service must be set");
 
 		serviceInst = Cache.getCachedInstance(service, _cache, scope) as RtmpService;
-		if(serviceInst == null) throw new Error('rtmpService must be set');
-		if(!serviceInst.connected) throw new Error('rtmpService must be connected');
+		if(serviceInst == null) throw new Error("rtmpService must be set");
+		if(!serviceInst.connected) throw new Error("rtmpService must be connected");
 
-		if(!request) throw new Error('request must be set');
-		if(!request.action) throw new Error('request.action must be set');
+		if(!request) throw new Error("request must be set");
+		if(!request.action) throw new Error("request.action must be set");
 
 		_callParams = getCallParams(scope);
 	}
@@ -89,6 +89,6 @@ public class RtmpServiceInvoker extends AbstractServiceInvoker implements IActio
 	}
 
 	public function toString() : String
-	{ return 'RtmpServiceInvoker'; }
+	{ return "RtmpServiceInvoker"; }
 }
 }

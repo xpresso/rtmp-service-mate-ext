@@ -27,7 +27,7 @@
 		public var appState : uint;
 
 		[Bindable]
-		public var userName : String = '';
+		public var userName : String = "";
 
 		[Bindable]
 		public var rooms : ArrayCollection;
@@ -60,7 +60,7 @@
 			event.message.content = input.text;
 			dispatchEvent(event);
 
-			input.text = '';
+			input.text = "";
 		}
 
 		]]></fx:Script>

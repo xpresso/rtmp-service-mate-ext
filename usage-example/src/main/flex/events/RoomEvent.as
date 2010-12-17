@@ -8,8 +8,8 @@ import flash.events.Event;
 public class RoomEvent extends Event
 {
 	// constants
-	static public const LOAD_LIST : String = 'loadRoomList';
-	static public const JOIN : String = 'joinRoom';
+	static public const LOAD_LIST : String = "loadRoomList";
+	static public const JOIN : String = "joinRoom";
 
 	// properties
 	public var roomName : String;

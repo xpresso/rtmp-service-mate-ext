@@ -44,10 +44,10 @@ public class CallbackRegistrator extends AbstractAction implements IAction
 
     override protected function prepare(scope : IScope) : void
     {
-        if(service == null) throw new Error('service must be set');
+        if(service == null) throw new Error("service must be set");
 
         serviceInst = Cache.getCachedInstance(service, _cache, scope) as RtmpService;
-        if(serviceInst == null) throw new Error('rtmpService must be set');
+        if(serviceInst == null) throw new Error("rtmpService must be set");
 
         if(target is Class)
         {
@@ -74,6 +74,6 @@ public class CallbackRegistrator extends AbstractAction implements IAction
     }
 
     public function toString() : String
-    { return 'CallbackRegistrator'; }
+    { return "CallbackRegistrator"; }
 }
 }

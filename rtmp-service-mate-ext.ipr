@@ -223,6 +223,14 @@
       </item>
     </group>
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="yura">
+      <words>
+        <w>async</w>
+        <w>rtmp</w>
+      </words>
+    </dictionary>
+  </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state />

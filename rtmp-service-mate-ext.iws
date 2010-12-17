@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53d08c45-9ad3-47bc-9794-7fecd51da677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fms-example/pom.xml" afterPath="$PROJECT_DIR$/fms-example/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/red5-example/pom.xml" afterPath="$PROJECT_DIR$/red5-example/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/dependency-sample.xml" afterPath="$PROJECT_DIR$/release/dependency-sample.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/install-artifact.sh" afterPath="$PROJECT_DIR$/release/install-artifact.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service-mate-ext.iws" afterPath="$PROJECT_DIR$/rtmp-service-mate-ext.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/pom.xml" afterPath="$PROJECT_DIR$/rtmp-service/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage-example/pom.xml" afterPath="$PROJECT_DIR$/usage-example/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wowza-example/deploy.wowza.xml" afterPath="$PROJECT_DIR$/wowza-example/deploy.wowza.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wowza-example/pom.xml" afterPath="$PROJECT_DIR$/wowza-example/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service-mate-ext.ipr" afterPath="$PROJECT_DIR$/rtmp-service-mate-ext.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-service/rtmp-service.iml" afterPath="$PROJECT_DIR$/rtmp-service/rtmp-service.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage-example/usage-example.iml" afterPath="$PROJECT_DIR$/usage-example/usage-example.iml" />
     </list>
     <ignored path="rtmp-service-mate-ext.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -417,8 +410,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="27" width="1610" height="1023" extended-state="0" />
-    <editor active="false" />
+    <frame x="68" y="27" width="1610" height="1023" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -567,13 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/red5-example/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="393" selection-end="393" vertical-scroll-proportion="0.16018845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fms-example/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="20" selection-start="404" selection-end="404" vertical-scroll-proportion="0.20023558">
@@ -591,6 +577,13 @@
     <entry file="file://$PROJECT_DIR$/red5-example/deploy.red5.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red5-example/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0194508">
           <folding />
         </state>
       </provider>

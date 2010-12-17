@@ -12,3 +12,5 @@
 
 - registerEventHandler in addition to registerCallback
 
+- sample for using several instances of RtmpService in different maps
+  for working with different servers at the same time

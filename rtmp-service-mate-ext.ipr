@@ -320,9 +320,7 @@
       </SOURCES>
     </library>
     <library name="Maven: com.adobe.flex.framework:datavisualization:rb.swc:4.1.0.16076">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/datavisualization/4.1.0.16076/datavisualization-4.1.0.16076-en_US.rb.swc!/" />
-      </CLASSES>
+      <CLASSES />
       <JAVADOC>
         <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/datavisualization/4.1.0.16076/datavisualization-4.1.0.16076-asdoc.zip!/" />
       </JAVADOC>
@@ -342,9 +340,7 @@
       </SOURCES>
     </library>
     <library name="Maven: com.adobe.flex.framework:flash-integration:rb.swc:4.1.0.16076">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/flash-integration/4.1.0.16076/flash-integration-4.1.0.16076-en_US.rb.swc!/" />
-      </CLASSES>
+      <CLASSES />
       <JAVADOC>
         <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/flash-integration/4.1.0.16076/flash-integration-4.1.0.16076-asdoc.zip!/" />
       </JAVADOC>
@@ -375,9 +371,7 @@
       </SOURCES>
     </library>
     <library name="Maven: com.adobe.flex.framework:framework:rb.swc:4.1.0.16076">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/framework/4.1.0.16076/framework-4.1.0.16076-en_US.rb.swc!/" />
-      </CLASSES>
+      <CLASSES />
       <JAVADOC>
         <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/framework/4.1.0.16076/framework-4.1.0.16076-asdoc.zip!/" />
       </JAVADOC>
@@ -397,9 +391,7 @@
       </SOURCES>
     </library>
     <library name="Maven: com.adobe.flex.framework:osmf:rb.swc:4.1.0.16076">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/osmf/4.1.0.16076/osmf-4.1.0.16076-en_US.rb.swc!/" />
-      </CLASSES>
+      <CLASSES />
       <JAVADOC>
         <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/osmf/4.1.0.16076/osmf-4.1.0.16076-asdoc.zip!/" />
       </JAVADOC>
@@ -419,9 +411,7 @@
       </SOURCES>
     </library>
     <library name="Maven: com.adobe.flex.framework:playerglobal:rb.swc:4.1.0.16076">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/playerglobal/4.1.0.16076/playerglobal-4.1.0.16076-en_US.rb.swc!/" />
-      </CLASSES>
+      <CLASSES />
       <JAVADOC>
         <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/playerglobal/4.1.0.16076/playerglobal-4.1.0.16076-asdoc.zip!/" />
       </JAVADOC>
@@ -441,9 +431,7 @@
       </SOURCES>
     </library>
     <library name="Maven: com.adobe.flex.framework:rpc:rb.swc:4.1.0.16076">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/rpc/4.1.0.16076/rpc-4.1.0.16076-en_US.rb.swc!/" />
-      </CLASSES>
+      <CLASSES />
       <JAVADOC>
         <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/rpc/4.1.0.16076/rpc-4.1.0.16076-asdoc.zip!/" />
       </JAVADOC>
@@ -463,9 +451,7 @@
       </SOURCES>
     </library>
     <library name="Maven: com.adobe.flex.framework:spark:rb.swc:4.1.0.16076">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/spark/4.1.0.16076/spark-4.1.0.16076-en_US.rb.swc!/" />
-      </CLASSES>
+      <CLASSES />
       <JAVADOC>
         <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/spark/4.1.0.16076/spark-4.1.0.16076-asdoc.zip!/" />
       </JAVADOC>
@@ -496,9 +482,7 @@
       </SOURCES>
     </library>
     <library name="Maven: com.adobe.flex.framework:textLayout:rb.swc:4.1.0.16076">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/textLayout/4.1.0.16076/textLayout-4.1.0.16076-en_US.rb.swc!/" />
-      </CLASSES>
+      <CLASSES />
       <JAVADOC>
         <root url="jar://$MAVEN_REPOSITORY$/com/adobe/flex/framework/textLayout/4.1.0.16076/textLayout-4.1.0.16076-asdoc.zip!/" />
       </JAVADOC>

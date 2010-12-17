@@ -57,10 +57,13 @@ public class RtmpService
 
 	public var warnAboutDefaultDispatcher : Boolean = true;
 
-	private var logger : ILogger = Log.getLogger('RtmpService');
+	private var logger : ILogger = Log.getLogger("RtmpService");
 
 	private var reconnect : Reconnect;
 	private var selfDisconnect : Boolean = false;
+
+	private var instID : int = 0;
+	static private var nextInstID : int = 0;
 
 	// constructor
 	public function RtmpService(dispatcher : IEventDispatcher = null,
@@ -68,8 +71,10 @@ public class RtmpService
 								useAMF0 : Boolean = false)
 	{
 		super();
+		instID = ++nextInstID;
 
-		logger.debug('instance created');
+		logger = Log.getLogger("RtmpService" + instID);
+		logger.debug("instance {0} created", instID);
 
 		if(dispatcher == null)
 		{
@@ -101,10 +106,10 @@ public class RtmpService
 	{
 		if(_netConnection.connected)
 		{
-			throw new Error(this + ' is already connected!');
+			throw new Error(this + " is already connected!");
 		}
 
-		logger.info('connect to [' + rtmp + ']', data);
+		logger.info("connect to [" + rtmp + "]", data);
 
 		selfDisconnect = false;
 		reconnect.rtmp = rtmp;
@@ -114,7 +119,7 @@ public class RtmpService
 
 	public function disconnect() : void
 	{
-		logger.info('disconnect');
+		logger.info("disconnect");
 
 		selfDisconnect = true;
 		_netConnection.close();
@@ -130,14 +135,14 @@ public class RtmpService
 
 	public function registerCallback(methodName : String, callback : Function) : void
 	{
-		logger.debug('registerCallback [' + methodName + ']');
+		logger.debug("registerCallback [" + methodName + "]");
 
 		_client[methodName] = callback;
 	}
 
 	public function call(methodName : String, ... args) : void
 	{
-		logger.debug('call [' + methodName + ']', args);
+		logger.debug("call [" + methodName + "]", args);
 
 		args.unshift(new Responder(onResult, onCallStatus));
 		args.unshift(methodName);
@@ -146,7 +151,7 @@ public class RtmpService
 
 	protected function onResult(data : *) : void
 	{
-		logger.debug('onResult ' + data);
+		logger.debug("onResult " + data);
 
 		if(warnAboutDefaultDispatcher && _dispatcher == _defaultDispatcher)
 			logger.warn("default dispatcher used, event can`t be catch in mate event map");
@@ -156,33 +161,33 @@ public class RtmpService
 
 	protected function onCallStatus(data : Object) : void
 	{
-		logger.error('onCallStatus ' + data.level + ' ' + data.code, data.description);
+		logger.error("onCallStatus " + data.level + " " + data.code, data.description);
 
 		_dispatcher.dispatchEvent(new RtmpErrorEvent().init(data.code, data.level, data.description));
 	}
 
 	protected function onNetStatus(e : NetStatusEvent) : void
 	{
-		logger.info('onNetStatus ' + e.info.level + ' ' + e.info.code);
+		logger.info("onNetStatus " + e.info.level + " " + e.info.code);
 
 		if(warnAboutDefaultDispatcher && _dispatcher == _defaultDispatcher)
 			logger.warn("default dispatcher used, event can`t be catch in mate event map");
 
 		switch(e.info.code)
 		{
-			case 'NetConnection.Connect.Success':
+			case "NetConnection.Connect.Success":
 				_dispatcher.dispatchEvent(new RtmpStatusEvent(RtmpStatusEvent.SUCCESS));
 				break;
 
-			case 'NetConnection.Connect.Rejected':
+			case "NetConnection.Connect.Rejected":
 				_dispatcher.dispatchEvent(new RtmpStatusEvent(RtmpStatusEvent.REJECTED));
 				break;
 
-			case 'NetConnection.Connect.Failed':
+			case "NetConnection.Connect.Failed":
 				_dispatcher.dispatchEvent(new RtmpStatusEvent(RtmpStatusEvent.FAILED));
 				break;
 
-			case 'NetConnection.Connect.Closed':
+			case "NetConnection.Connect.Closed":
 				_dispatcher.dispatchEvent(new RtmpStatusEvent(RtmpStatusEvent.DISCONNECTED));
 				if(!selfDisconnect)
 				{
@@ -191,26 +196,26 @@ public class RtmpService
 				}
 				break;
 
-			default: logger.error('unknown netStatus [' + e.info.code + ']');
+			default: logger.error("unknown netStatus [" + e.info.code + "]");
 		}
 	}
 
 	protected function onIOError(e : IOErrorEvent) : void
 	{
-		logger.error('IO error: ' + e.text);
+		logger.error("IO error: " + e.text);
 	}
 
 	protected function onSecurityError(e : SecurityErrorEvent) : void
 	{
-		logger.error('Security error: ' + e.text);
+		logger.error("Security error: " + e.text);
 	}
 
 	protected function onAsyncError(e : AsyncErrorEvent) : void
 	{
-		logger.error('AsyncError ' + e.toString());
+		logger.error("AsyncError " + e.toString());
 	}
 
 	public function toString() : String
-	{ return 'RtmpService'; }
+	{ return "RtmpService"; }
 }
 }

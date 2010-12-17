@@ -15,7 +15,7 @@
 				<include name="rtmp-service-mate-ext/Application.xml"/>
 			</fileset>
 			<fileset  dir="${dest}lib">
-				<include name="wowza-example-1.2.0-SNAPSHOT.jar"/>
+				<include name="wowza-example-1.3.0-SNAPSHOT.jar"/>
 			</fileset>
 		</delete>
 	</target>

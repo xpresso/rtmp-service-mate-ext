@@ -3,7 +3,6 @@
  */
 package
 {
-import com.flashdevs.mateExt.rtmpService.RtmpService;
 import com.flashdevs.mateExt.rtmpService.events.RtmpErrorEvent;
 
 import enums.AppState;
@@ -16,7 +15,6 @@ import vo.Message;
 
 public class MainManager
 {
-	// properties
 	[Bindable]
 	public var appState : int = AppState.CONNECTING;
 
@@ -32,31 +30,25 @@ public class MainManager
 	[Bindable]
 	public var outputText : String = '';
 
-	private var logger : ILogger = Log.getLogger('MainManager');
+	private var log : ILogger = Log.getLogger('MainManager');
 
-	// constructor
-	public function MainManager()
-	{
-	}
-
-	// methods
 	public function onConnect() : void
 	{
-		logger.info('onConnect');
+		log.info('onConnect');
 
 		appState = AppState.LOGIN;
 	}
 
 	public function onLogin(userName : String) : void
 	{
-		logger.info('onLogin [' + userName + ']');
+		log.info('onLogin [{0}]', userName);
 
 		this.userName = userName;
 	}
 
 	public function onRooms(rooms : Array) : void
 	{
-		logger.info('onRooms [' + rooms + ']');
+		log.info('onRooms [{0}]', rooms);
 
 		this.rooms = new ArrayCollection(rooms);
 		appState = AppState.SELECT_ROOM;
@@ -64,7 +56,7 @@ public class MainManager
 
 	public function onJoinRoom(roomName : String) : void
 	{
-		logger.info('onJoinRoom [' + roomName + ']');
+		log.info('onJoinRoom [{0}]', roomName);
 
 		this.roomName = roomName;
 		appState = AppState.CHAT;
@@ -72,7 +64,7 @@ public class MainManager
 
 	public function onSendMessage(data : Object) : void
 	{
-		logger.info('onSendMessage [' + data + ']');
+		log.info('onSendMessage [{0}]', data);
 	}
 
 	public function onNewMessage(data : Object) : void
@@ -91,13 +83,13 @@ public class MainManager
 			message.content = data.content;
 		}
 
-		logger.info('onNewMessage ' + message.senderName + ' ' + message.content);
+		log.info('onNewMessage {0} {1}', message.senderName, message.content);
 		outputText += message.senderName + ': ' + message.content + '\n';
 	}
 
 	public function onError(event : RtmpErrorEvent) : void
 	{
-		logger.error('onError ' + event.level + ' ' + event.code, event.description);
+		log.error('onError {0} {1} {2}', event.level, event.code, event.description);
 	}
 
 	public function toString() : String

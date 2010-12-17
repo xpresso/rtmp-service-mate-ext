@@ -22,7 +22,7 @@ internal class Reconnect
 	private var timer : Timer;
 	private var service : RtmpService;
 
-	private var logger : ILogger = Log.getLogger('RtmpService');
+	private var log : ILogger = Log.getLogger('RtmpService');
 
 	public function Reconnect(service : RtmpService) : void
 	{
@@ -31,7 +31,7 @@ internal class Reconnect
 
 	public function processDisconnect() : void
 	{
-		logger.info("process disconnect, try to reconnect in " + delay + " miliseconds");
+		log.info("process disconnect, try to reconnect in {0} milliseconds", delay);
 
 		if(!timer)
 		{
@@ -50,7 +50,7 @@ internal class Reconnect
 
 	private function doReconnect(e : TimerEvent) : void
 	{
-		logger.info("trying to reconnect to " + rtmp);
+		log.info("trying to reconnect to {0}", rtmp);
 
 		service.dispatcher.dispatchEvent(new RtmpStatusEvent(RtmpStatusEvent.TRY_RECONNECT));
 		service.connect(rtmp, connectData);
@@ -58,7 +58,7 @@ internal class Reconnect
 
 	private function giveUp(e : TimerEvent) : void
 	{
-		logger.error("failed to reconnect to " + rtmp);
+		log.error("failed to reconnect to {0}", rtmp);
 		service.dispatcher.dispatchEvent(new RtmpStatusEvent(RtmpStatusEvent.RECONNECT_FAILED));
 	}
 

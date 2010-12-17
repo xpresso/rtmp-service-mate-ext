@@ -43,6 +43,8 @@ public class RtmpService
 	{ return _netConnection.connected; }
 
 
+	// TODO -- send instID to constructor and use for logger
+	// TODO -- change ' to " everywhere
 	protected var _client : RtmpClient = new RtmpClient();
 
 
@@ -57,7 +59,7 @@ public class RtmpService
 
 	public var warnAboutDefaultDispatcher : Boolean = true;
 
-	private var logger : ILogger = Log.getLogger("RtmpService");
+	private var log : ILogger = Log.getLogger("RtmpService");
 
 	private var reconnect : Reconnect;
 	private var selfDisconnect : Boolean = false;
@@ -73,8 +75,8 @@ public class RtmpService
 		super();
 		instID = ++nextInstID;
 
-		logger = Log.getLogger("RtmpService" + instID);
-		logger.debug("instance {0} created", instID);
+		log = Log.getLogger("RtmpService" + instID);
+		log.debug("instance {0} created", instID);
 
 		if(dispatcher == null)
 		{
@@ -109,7 +111,7 @@ public class RtmpService
 			throw new Error(this + " is already connected!");
 		}
 
-		logger.info("connect to [" + rtmp + "]", data);
+		log.info("connect to [{0}]", rtmp);
 
 		selfDisconnect = false;
 		reconnect.rtmp = rtmp;
@@ -119,7 +121,7 @@ public class RtmpService
 
 	public function disconnect() : void
 	{
-		logger.info("disconnect");
+		log.info("disconnect");
 
 		selfDisconnect = true;
 		_netConnection.close();
@@ -127,7 +129,7 @@ public class RtmpService
 
 	public function initReconnect(numTries : uint, delay : uint) : void
 	{
-		logger.info("initReconnect " + numTries + " " + delay);
+		log.info("initReconnect {0} {1}", numTries, delay);
 
 		reconnect.numTries = numTries;
 		reconnect.delay = delay;
@@ -135,14 +137,14 @@ public class RtmpService
 
 	public function registerCallback(methodName : String, callback : Function) : void
 	{
-		logger.debug("registerCallback [" + methodName + "]");
+		log.debug("registerCallback [{0}]", methodName);
 
 		_client[methodName] = callback;
 	}
 
 	public function call(methodName : String, ... args) : void
 	{
-		logger.debug("call [" + methodName + "]", args);
+		log.debug("call [{0}] {1}", methodName, args);
 
 		args.unshift(new Responder(onResult, onCallStatus));
 		args.unshift(methodName);
@@ -151,27 +153,27 @@ public class RtmpService
 
 	protected function onResult(data : *) : void
 	{
-		logger.debug("onResult " + data);
+		log.debug("onResult {0}", data);
 
 		if(warnAboutDefaultDispatcher && _dispatcher == _defaultDispatcher)
-			logger.warn("default dispatcher used, event can`t be catch in mate event map");
+			log.warn("default dispatcher used, event can`t be catch in mate event map");
 		
 		_dispatcher.dispatchEvent(new RtmpResultEvent().init(data));
 	}
 
 	protected function onCallStatus(data : Object) : void
 	{
-		logger.error("onCallStatus " + data.level + " " + data.code, data.description);
+		log.error("onCallStatus {0} {1} {2}", data.level, data.code, data.description);
 
 		_dispatcher.dispatchEvent(new RtmpErrorEvent().init(data.code, data.level, data.description));
 	}
 
 	protected function onNetStatus(e : NetStatusEvent) : void
 	{
-		logger.info("onNetStatus " + e.info.level + " " + e.info.code);
+		log.info("onNetStatus {0} {1}", e.info.level, e.info.code);
 
 		if(warnAboutDefaultDispatcher && _dispatcher == _defaultDispatcher)
-			logger.warn("default dispatcher used, event can`t be catch in mate event map");
+			log.warn("default dispatcher used, event can`t be catch in mate event map");
 
 		switch(e.info.code)
 		{
@@ -196,23 +198,23 @@ public class RtmpService
 				}
 				break;
 
-			default: logger.error("unknown netStatus [" + e.info.code + "]");
+			default: log.error("unknown netStatus [{0}]", e.info.code);
 		}
 	}
 
 	protected function onIOError(e : IOErrorEvent) : void
 	{
-		logger.error("IO error: " + e.text);
+		log.error("IO error: {0}", e.text);
 	}
 
 	protected function onSecurityError(e : SecurityErrorEvent) : void
 	{
-		logger.error("Security error: " + e.text);
+		log.error("Security error: {0}", e.text);
 	}
 
 	protected function onAsyncError(e : AsyncErrorEvent) : void
 	{
-		logger.error("AsyncError " + e.toString());
+		log.error("AsyncError {0}", e.toString());
 	}
 
 	public function toString() : String

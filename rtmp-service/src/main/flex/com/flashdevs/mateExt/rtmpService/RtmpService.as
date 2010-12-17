@@ -43,8 +43,7 @@ public class RtmpService
 	{ return _netConnection.connected; }
 
 
-	// TODO -- send instID to constructor and use for logger
-	protected var _client : RtmpClient = new RtmpClient();
+	protected var _client : RtmpClient;
 
 
 	protected var _defaultDispatcher : IEventDispatcher = new EventDispatcher();
@@ -76,6 +75,7 @@ public class RtmpService
 
 		log = Log.getLogger("RtmpService" + instID);
 		log.debug("instance {0} created", instID);
+		_client = new RtmpClient(instID);
 
 		if(dispatcher == null)
 		{

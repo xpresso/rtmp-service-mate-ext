@@ -18,7 +18,12 @@ internal class RtmpClient extends Proxy
 
 	private var callbacks : Object = {};
 
-	private var log : ILogger = Log.getLogger("RtmpClient");
+	private var log : ILogger;
+
+	public function RtmpClient(instID : int)
+	{
+		log = Log.getLogger("RtmpClient" + instID);
+	}
 
 	flash_proxy override function setProperty(name : *, value : *) : void
 	{

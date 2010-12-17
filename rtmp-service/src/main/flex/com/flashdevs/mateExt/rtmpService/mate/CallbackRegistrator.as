@@ -33,29 +33,39 @@ public class CallbackRegistrator extends AbstractAction implements IAction
     public var method : String;
 
 
-    private var _cache : String = "inherit";
+    private var _serviceCache : String = "inherit";
 
-    public function get cache() : String
-    { return _cache; }
+    public function get serviceCache() : String
+    { return _serviceCache; }
 
     [Inspectable(enumeration="local,global,inherit")]
-    public function set cache(value : String) : void
-    { _cache = value; }
+    public function set serviceCache(value : String) : void
+    { _serviceCache = value; }
+
+
+    private var _targetCache : String = "inherit";
+
+    public function get targetCache() : String
+    { return _targetCache; }
+
+    [Inspectable(enumeration="local,global,inherit")]
+    public function set targetCache(value : String) : void
+    { _targetCache = value; }
 
     override protected function prepare(scope : IScope) : void
     {
         if(service == null) throw new Error("service must be set");
 
-        serviceInst = Cache.getCachedInstance(service, _cache, scope) as RtmpService;
+        serviceInst = Cache.getCachedInstance(service, _serviceCache, scope) as RtmpService;
         if(serviceInst == null) throw new Error("rtmpService must be set");
 
         if(target is Class)
         {
-            currentInstance = Cache.getCachedInstance(target, _cache, scope);
+            currentInstance = Cache.getCachedInstance(target, _targetCache, scope);
             if(!currentInstance)
             {
                 var creator : Creator = new Creator(target, scope.dispatcher);
-                currentInstance = creator.create(scope, true, null, _cache);
+                currentInstance = creator.create(scope, true, null, _targetCache);
             }
         }
         else if(target is ISmartObject)

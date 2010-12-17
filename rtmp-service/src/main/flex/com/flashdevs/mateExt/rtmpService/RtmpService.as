@@ -53,7 +53,10 @@ public class RtmpService
 	{ return _dispatcher; }
 
 	public function set dispatcher(value : IEventDispatcher) : void
-	{ _dispatcher = value; }
+	{
+		_dispatcher = value;
+		log.debug("use dispatcher {0}", _dispatcher);
+	}
 
 	public var warnAboutDefaultDispatcher : Boolean = true;
 
@@ -77,11 +80,9 @@ public class RtmpService
 		log.debug("instance {0} created", instID);
 		_client = new RtmpClient(instID);
 
-		if(dispatcher == null)
-		{
-			_dispatcher = _defaultDispatcher;
-		}
+		if(dispatcher == null) _dispatcher = _defaultDispatcher;
 		else _dispatcher = dispatcher;
+		log.debug("use dispatcher {0}", _dispatcher);
 
 		_client.dispatcher = _dispatcher;
 

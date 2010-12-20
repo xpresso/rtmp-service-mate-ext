@@ -142,9 +142,18 @@ public class RtmpService
 		_client[methodName] = callback;
 	}
 
+	public function callWithResponder(methodName : String, responder : Responder, ... args) : void
+	{
+		log.debug("callWithResponder {0} {1}", methodName, args);
+
+		args.unshift(responder);
+		args.unshift(methodName);
+		_netConnection.call.apply(_netConnection, args);
+	}
+
 	public function call(methodName : String, ... args) : void
 	{
-		log.debug("call [{0}] {1}", methodName, args);
+		log.debug("call {0} {1}", methodName, args);
 
 		args.unshift(new Responder(onResult, onCallStatus));
 		args.unshift(methodName);

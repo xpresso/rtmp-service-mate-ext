@@ -1,3 +1,6 @@
+- check if we have troube when sending next call before getting answer 
+  to previouse call
+
 - sample for using rtmp-service without mate
 
 - default error handler
@@ -14,3 +17,4 @@
 
 - sample for using several instances of RtmpService in different maps
   for working with different servers at the same time
+  Better not use Mate map but work with RtmpService directly

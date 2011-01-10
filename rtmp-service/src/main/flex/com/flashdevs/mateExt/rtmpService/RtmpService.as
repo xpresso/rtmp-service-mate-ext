@@ -188,6 +188,7 @@ public class RtmpService
 		{
 			case "NetConnection.Connect.Success":
 				_dispatcher.dispatchEvent(new RtmpStatusEvent(RtmpStatusEvent.SUCCESS));
+				reconnect.stop();
 				break;
 
 			case "NetConnection.Connect.Rejected":

@@ -48,6 +48,13 @@ internal class Reconnect
 		timer.start();
 	}
 
+	public function stop() : void
+	{
+		log.debug("stop");
+		
+		if(timer) timer.stop();
+	}
+
 	private function doReconnect(e : TimerEvent) : void
 	{
 		log.info("trying to reconnect to {0}", rtmp);
@@ -59,6 +66,8 @@ internal class Reconnect
 	private function giveUp(e : TimerEvent) : void
 	{
 		log.error("failed to reconnect to {0}", rtmp);
+
+		stop();
 		service.dispatcher.dispatchEvent(new RtmpStatusEvent(RtmpStatusEvent.RECONNECT_FAILED));
 	}
 

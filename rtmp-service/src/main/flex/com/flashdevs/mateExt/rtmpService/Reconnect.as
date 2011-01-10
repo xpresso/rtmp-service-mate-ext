@@ -14,15 +14,15 @@ import mx.logging.Log;
 internal class Reconnect
 {
 	// properties
-	public var numTries : uint = 3;
-	public var delay : uint = 20 * 1000; // miliseconds
+	public var numTries : uint = 6;
+	public var delay : uint = 10 * 1000; // miliseconds
 	public var rtmp : String;
 	public var connectData : Object;
 
 	private var timer : Timer;
 	private var service : RtmpService;
 
-	private var log : ILogger = Log.getLogger("RtmpService");
+	private var log : ILogger = Log.getLogger("Reconnect");
 
 	public function Reconnect(service : RtmpService) : void
 	{

@@ -155,6 +155,13 @@ public class RtmpService
 	{
 		log.debug("call {0} {1}", methodName, args);
 
+		// NOTE: usual mistake is to call service.call("method", null, param1, param2);
+		// instead of service.call("method", param1, param2);
+		if(args[0] == null)
+		{
+			log.warn("RtmpService.call [{0}] is called with null in first argument", methodName);
+		}
+
 		args.unshift(new Responder(onResult, onCallStatus));
 		args.unshift(methodName);
 		_netConnection.call.apply(_netConnection, args);
